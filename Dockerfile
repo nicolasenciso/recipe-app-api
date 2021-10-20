@@ -8,8 +8,8 @@ RUN pip install -r /requirements.txt
 
 RUN mkdir /app
 WORKDIR /app
-COPY ./.flake8 /app
 COPY ./app /app
+COPY flake8 /app
 
 RUN adduser -D user
 USER user
