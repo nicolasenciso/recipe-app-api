@@ -7,8 +7,8 @@ COPY ./requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 
 RUN mkdir /app
-COPY .flake8 /app
 WORKDIR /app
+COPY .flake8 /app/
 COPY ./app /app
 
 RUN adduser -D user
